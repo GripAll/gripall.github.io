@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+:root {
+    /* Base styles (common for both light and dark mode) */
+    --md-ref-typeface-brand: 'Open Sans';
+    --md-ref-typeface-plain: system-ui;
+    --shapeOne: 28px;
+  }
+  
+  /* Light mode styles */
+  @media (prefers-color-scheme: light) {
+    :root {
+     /*--md-fab-container-color:#f1d3f9;*/
+      --md-sys-color-primary: #6442d6; /* Light mode primary color */
+      --md-sys-color-secondary: #5d5d74; /* Light mode secondary color */
+      --md-sys-color-background: #fff8f3; /* Light mode background color */
+      --md-sys-color-surface: #fff8f3; /* Light mode surface color */
+      --md-sys-color-surface-container:#f8ecde; /* Light mode surface container color */
+    }
+  }
+  
+  /* Dark mode styles */
+  @media (prefers-color-scheme: dark) {
+    :root {
+    --md-fab-container-color:black;
+      --md-sys-color-primary: #ffc107; /* Dark mode primary color (example) */
+      --md-sys-color-secondary: #e6c188; /* Dark mode secondary color (example) */
+      --md-sys-color-background: #212121; /* Dark mode background color (example) */
+      --md-sys-color-surface-variant:#504534;
+      --md-sys-color-surface: #18130b; /* Dark mode surface color (example) */
+      --md-sys-color-surface-container:#251f16; /* Dark mode surface container color (example) */
+      --md-sys-color-on-surface:#ede1d3;
+      --md-sys-color-surface-variant:#504534;
+    }
+  }
+  
+
+
+html {
+    font-family: Open Sans, sans-serif;
+    margin: 0;
+    padding: 0;
+    color:var(--md-sys-color-on-surface)
+}
+
+
+body {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    background-color:var(--md-sys-color-surface-container) ;
+}
+
+.menuA {
+
+
+    position: relative;
+    background-color: var(--md-sys-color-surface);
+    height: 100svh;  /* Or a fixed height if your content is predictable */
+    width: fit-content;
+    border-radius: 50px;
+   
+
+    /* Handle overflow if needed: */
+    overflow: hidden;  /* Or overflow: scroll; depending on your requirements */
+}
+
+
+.container {    
+    align-self: center;
+    justify-self: center;
+    border-radius: var(--shapeOne);
+    background-color:var(--md-sys-color-surface) ;
+    overflow:auto;
+    margin: 0 auto;
+    padding: 10px;
+    box-sizing: border-box;
+
+    max-width: 50svw;
+    max-height: 50svh;
+    height: 50svh;
+    width: 50svw;
+}
+
+
+#intro:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+
+
+
+}
+
+#intro:not(:hover) {
+    transition: 0.5s;
+}
+
+
+
+
+.menuA > md-fab {
+    min-width: 100%;
+    min-height: 100%;
+}
+
+
+table,td,th {
+
+
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+}
+
+
+
+
+@media (max-width: 800px) { /* For screens narrower than 768px */
+    
+    .menuA{
+        min-width: 20svw;
+        transition: 0.5s;
+        
+    }
+
+    table,td,th {
+        width: 20svw;
+        height: 10svh;
+
+        transition: 0.5s;
+    }
+
+    md-fab{
+        transform: scale(1.5);
+        padding-left: 10px;
+        padding-right: 10px;
+        padding: 30px; /* Add 15px padding on hover */
+        transition: 0.5s;
+    }
+    
+    
+
+
+}
+
+@media (min-width: 801px) { /* For screens narrower than 768px */
+    .menuA:hover md-fab {
+        padding-left: 10px;
+        padding-right: 10px;
+        padding: 30px; /* Add 15px padding on hover */
+        transition: 0.5s;
+    }
+    
+    
+    .menuA:not(:hover) md-fab {
+        padding: 10px; /* Add 15px padding on hover */
+        transition: 0.5s;
+    }
+}

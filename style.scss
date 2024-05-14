@@ -1,0 +1,11 @@
+@use '@material/web/color/color';
+@use '@material/web/color/typography';
+
+:root {
+  @include color.light-theme;
+  @include typography.theme;
+
+  @media (prefers-color-scheme: dark) {
+    @include color.dark-theme;
+  }
+}
