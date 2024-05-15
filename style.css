@@ -72,6 +72,7 @@ body {
 .container {    
     align-self: center;
     justify-self: center;
+    vertical-align: middle;
     border-radius: var(--shapeOne);
     background-color:var(--md-sys-color-surface) ;
     overflow:auto;
