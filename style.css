@@ -86,21 +86,6 @@ body {
 }
 
 
-#intro:hover {
-    transform: scale(1.1);
-    transition: 0.5s;
-
-
-
-}
-
-#intro:not(:hover) {
-    transition: 0.5s;
-}
-
-
-
-
 .menuA > md-fab {
     min-width: 100%;
     min-height: 100%;
@@ -133,6 +118,21 @@ table,td,th {
         transition: 0.5s;
     }
 
+
+
+    #intro:active {
+        transform: scale(1.1);
+        transition: 0.5s;
+    
+    
+    
+    }
+    
+    #intro:not(:active) {
+        transition: 0.5s;
+    }
+    
+
     md-fab{
         transform: scale(1.5);
         padding-left: 10px;
@@ -153,6 +153,20 @@ table,td,th {
         padding: 30px; /* Add 15px padding on hover */
         transition: 0.5s;
     }
+
+
+    #intro:hover {
+        transform: scale(1.1);
+        transition: 0.5s;
+    
+    
+    
+    }
+    
+    #intro:not(:hover) {
+        transition: 0.5s;
+    }
+    
     
     
     .menuA:not(:hover) md-fab {
