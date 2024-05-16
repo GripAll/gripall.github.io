@@ -12,25 +12,40 @@
 
 
 <body>
+   <top-app-bar>
+        <md-icon-button class="menutoggle">
+          <md-icon>menu</md-icon>
+        </md-icon-button>
+   </top-app-bar>
 
   <script src="./bundle.js"></script>
   <div class="menuA">
-     <table style="border-collapse: collapse; ">
-         <tr>
-          <td>
-            <md-fab> aria-label="check">
-              <md-icon slot="icon">edit</md-icon>
-            </md-fab>
-        </td>
-        </tr>
+      <table>
         <tr>
-          <td>
-            <md-fab> aria-label="check">
-              <md-icon slot="icon">people</md-icon>
+          <td class="btnh">
+            <md-fab> aria-label="star">
+              <md-icon slot="icon">book</md-icon>
             </md-fab>
-         </td>
+
+            <p class="txth">
+              Past Work
+            </p>
+          </td>
         </tr>
-  </table>
+
+
+          <tr>
+            <td class="btnh">
+              <md-fab> aria-label="check">
+                <md-icon slot="icon">star_half</md-icon>
+              </md-fab>
+              <p class="txth">
+                Reviews
+              </p>
+           </td>
+          </tr>
+
+     </table>
   </div>
 
 
@@ -49,7 +64,6 @@
 
     Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
   </div>
-    
-  
+
 </body>
 </html>

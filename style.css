@@ -40,7 +40,7 @@
 
 
 html {
-    font-family: Open Sans, sans-serif;
+    font-family: Google Sans, sans-serif;
     margin: 0;
     padding: 0;
     color:var(--md-sys-color-on-surface)
@@ -54,20 +54,55 @@ body {
     background-color:var(--md-sys-color-surface-container) ;
 }
 
-.menuA {
 
 
-    position: relative;
-    background-color: var(--md-sys-color-surface);
-    height: 100svh;  /* Or a fixed height if your content is predictable */
-    width: fit-content;
-    border-radius: 50px;
-   
-
-    /* Handle overflow if needed: */
-    overflow: hidden;  /* Or overflow: scroll; depending on your requirements */
+md-fab {
+    padding: 10px;
+    padding-right: 5px;
+    padding-bottom: 0px;
 }
 
+
+top-app-bar{
+    display: flex;
+    position: absolute;
+
+    background-color:var(--md-sys-color-surface-container) ;
+
+    height: 10svh;
+    width: 100svw;
+
+    align-items: center;
+    padding-left: 20px;
+    z-index: 3;
+
+}
+
+
+
+.txth {
+    font-weight: bold;
+    font-size: small;
+}
+
+.menuA {
+    background-color: var(--md-sys-color-surface);
+    z-index: 2;
+    border-radius: 25px;
+    height: 80svh;
+    margin-top: 10svh;
+    width: fit-content;
+    max-width: 15svh;
+    padding: auto;
+}
+
+
+
+
+
+
+
+  
 
 .container {    
     align-self: center;
@@ -80,98 +115,90 @@ body {
     padding: 10px;
     box-sizing: border-box;
 
-    max-width: 50svw;
-    max-height: 50svh;
-    height: 50svh;
-    width: 50svw;
+    max-width: 70svw;
+    max-height: 70svh;
+    height: 70svw;
+    width: 100%;
+    transition: 0.5s;
 }
 
 
-.menuA > md-fab {
-    min-width: 100%;
-    min-height: 100%;
-}
 
 
 table,td,th {
-
-
-    width: 100%;
-    height: fit-content;
+    display: grid;
     text-align: center;
+    width: fit-content;
+    
 }
 
 
 
 
-@media (max-width: 800px) { /* For screens narrower than 768px */
+
+
+@media (max-width: 800px) { 
+
+    .menuA.open {
+        transform: scale(1);
+        transition: 0.5s;
+    }
     
-    .menuA{
-        min-width: 20svw;
-        transition: 0.5s;
-        
-    }
-
-    table,td,th {
-        width: 20svw;
-        height: 10svh;
-
+    .menuA:not(.open) {
+        transform: scale(0);
         transition: 0.5s;
     }
-
-
 
     #intro:active {
         transform: scale(1.1);
         transition: 0.5s;
-    
-    
-    
     }
     
     #intro:not(:active) {
         transition: 0.5s;
     }
-    
-
-    md-fab{
-        transform: scale(1.5);
-        padding-left: 10px;
-        padding-right: 10px;
-        padding: 30px; /* Add 15px padding on hover */
-        transition: 0.5s;
-    }
-    
-    
-
-
 }
 
-@media (min-width: 801px) { /* For screens narrower than 768px */
-    .menuA:hover md-fab {
-        padding-left: 10px;
-        padding-right: 10px;
-        padding: 30px; /* Add 15px padding on hover */
+
+@media (min-width: 801px) { /*big*/
+
+    .menuA:not(.open) {
+        transform: scale(1);
         transition: 0.5s;
     }
+
+    .menuA.open {
+        transform: scale(0);
+        transition: 0.5s;
+    }
+
+
+    md-fab:hover {
+        transform: scale(0.8);
+        transition: 0.5s;
+    }
+    
+
+    .btnh:not(:hover) ~ .txth{
+        transition: 0.5s;
+    }
+    
+    
+    md-fab:not(:hover){
+        transition: 0.5s;
+    }
+    
 
 
     #intro:hover {
         transform: scale(1.1);
+        max-width: 70svw;
+        padding: 20px;
+        margin-top: 10svh;
         transition: 0.5s;
-    
-    
-    
     }
     
     #intro:not(:hover) {
-        transition: 0.5s;
-    }
-    
-    
-    
-    .menuA:not(:hover) md-fab {
-        padding: 10px; /* Add 15px padding on hover */
         transition: 0.5s;
     }
 }
