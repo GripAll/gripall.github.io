@@ -45,7 +45,8 @@ html {
     font-family: Google Sans, sans-serif;
     margin: 0;
     padding: 0;
-    color:var(--md-sys-color-on-surface)
+    color:var(--md-sys-color-on-surface);
+    overflow: hidden;
 }
 
 
@@ -54,6 +55,10 @@ body {
     margin: 0;
     padding: 0;
     background-color:var(--md-sys-color-surface-container) ;
+    overflow: hidden;
+    position: fixed;
+    width: 100svw;
+
 }
 
 
@@ -114,6 +119,7 @@ top-app-bar{
     background-color:var(--md-sys-color-surface) ;
     overflow:auto;
     margin: 0 auto;
+    margin-bottom: 0;
     padding-left: 20px;
 
     margin-top: 10svh;
@@ -157,6 +163,7 @@ table,td,th {
     }
 
     .container{
+        margin-top: 10svh;
         max-height: 80svh;
         transition: 0.5s;
     }
@@ -201,15 +208,4 @@ table,td,th {
         transition: 0.5s;
     }
     
-
-
-
-
-    #intro:hover{
-        transition: 0.5s;
-    }
-    
-    #intro:not(:hover) {
-        transition: 0.5s;
-    }
 }
