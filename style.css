@@ -203,8 +203,9 @@ table,td,th {
     
 
 
-    #intro:hover {
-        border-radius: 0px;
+
+
+    #intro:hover{
         transition: 0.5s;
     }
     
