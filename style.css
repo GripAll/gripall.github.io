@@ -58,6 +58,7 @@ body {
     overflow: hidden;
     position: fixed;
     width: 100svw;
+    animation: scale-up 0.5s ease-in-out;
 
 }
 
@@ -86,7 +87,6 @@ top-app-bar{
 }
 
 
-
 .txth {
     font-weight: bold;
     font-size: small;
@@ -99,17 +99,12 @@ top-app-bar{
     height: 80svh;
     margin-top: 10svh;
     width: fit-content;
-    max-width: 15svh;
+    max-width: 15svw;
     padding: auto;
 }
 
 
 
-
-
-
-
-  
 
 .container {    
     align-self: center;
@@ -126,28 +121,52 @@ top-app-bar{
 
 
     max-height: 80svh;
-    max-width: 70svw;
+    max-width: 75svw;
     height: 80svh;
-    width: 70%;
+    width: 100%;
+    transition: 0.5s;
+    animation-delay: 1s;
+    animation:scale-up 0.5s ease-in-out;
+}
+
+
+
+
+
+
+.menutable,.menurow,.btnh {
+    display: grid;
+    text-align: center;
+    width: fit-content;
+}
+
+
+
+.container > table, th, .normalrow , .normalrow > td{
+    border-collapse: collapse;
+    border: 2px solid black;
+}
+
+
+
+
+.normalrow > td:hover{
+    background-color: rgb(200,200,200);
+    transition: 0.5s;
+}
+.normalrow > td:not(:hover){
     transition: 0.5s;
 }
 
 
 
-
-table,td,th {
-    display: grid;
-    text-align: center;
-    width: fit-content;
-    
-}
+@keyframes scale-up {
+    from { transform: scale(0); }
+    to { transform: scale(1); }
+  }
 
 
-
-
-
-
-@media (max-width: 800px) { 
+@media (max-width: 990px) { 
 
     .menuA.open {
         transform: scale(1);
@@ -165,21 +184,24 @@ table,td,th {
     .container{
         margin-top: 10svh;
         max-height: 80svh;
+        max-width: 75svw;
         transition: 0.5s;
     }
 
-    #intro:active {
-        transform: scale(1.1);
-        transition: 0.5s;
+    #labelbtn{
+        visibility: hidden;
+        position: absolute;
     }
-    
-    #intro:not(:active) {
-        transition: 0.5s;
+
+    #nolabelbtn{
+        visibility: visible;
+        position: relative;
     }
+
 }
 
 
-@media (min-width: 801px) { /*big*/
+@media (min-width: 991px) { /*big*/
 
     .menuA:not(.open) {
         transform: scale(1);
@@ -206,6 +228,12 @@ table,td,th {
     
     md-fab:not(:hover){
         transition: 0.5s;
+    }
+
+
+    #nolabelbtn{
+        visibility: hidden;
+        position: absolute;
     }
     
 }
