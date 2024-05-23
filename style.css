@@ -93,13 +93,15 @@ top-app-bar{
 }
 
 .menuA {
+    display: flex;
     background-color: var(--md-sys-color-surface);
     z-index: 2;
     border-radius: 25px;
     height: 80svh;
     margin-top: 10svh;
-    width: fit-content;
+    width: 100%;
     max-width: 15svw;
+    min-width: 15svw;
     padding: auto;
 }
 
@@ -135,9 +137,17 @@ top-app-bar{
 
 
 .menutable,.menurow,.btnh {
-    display: grid;
+    display: flex;
     text-align: center;
+    justify-content: center;
     width: fit-content;
+}
+
+.btnh{
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    height: fit-content;
 }
 
 
@@ -199,6 +209,51 @@ top-app-bar{
     }
 
 }
+
+
+@media (max-width: 470px) { 
+
+
+    .menuA{
+        min-width: 20svw;
+    }
+    .menuA.open {
+        transform: scale(1);
+        
+        transition: 0.5s;
+    }
+    
+    .menuA:not(.open) {
+        transform: scale(0);
+        max-width: 0;
+        transition-delay: 5s;
+        transition: 0.5s;
+    }
+
+    .container{
+        margin-top: 10svh;
+        max-height: 60svh;
+        max-width: 60svw;
+        transition: 0.5s;
+    }
+
+    #labelbtn{
+        visibility: hidden;
+        position: absolute;
+    }
+
+    #nolabelbtn{
+        visibility: visible;
+        position: relative;
+    }
+
+}
+
+
+
+
+
+
 
 
 @media (min-width: 991px) { /*big*/
