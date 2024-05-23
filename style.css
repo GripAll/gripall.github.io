@@ -126,7 +126,7 @@ top-app-bar{
 
 
     max-height: 80svh;
-    max-width: 75svw;
+    max-width: 80svw;
     height: 80svh;
     width: 100%;
     transition: 0.5s;
@@ -156,6 +156,23 @@ top-app-bar{
     height: fit-content;
 }
 
+
+
+.menuA.open ~ .container {
+    max-width: 95svw;
+    width: 95svw;
+    transition: 0.5s;
+}
+
+
+
+.menuA:not(.open){
+    position: relative;
+}
+
+.menuA.open{
+    position: absolute;
+}
 
 
 
@@ -246,11 +263,11 @@ top-app-bar{
 
     .menuA.open {
         transform: scale(1);
-        
         transition: 0.5s;
     }
     
     .menuA:not(.open) {
+
         transform: scale(0);
         max-width: 0;
         transition-delay: 5s;
@@ -282,9 +299,10 @@ top-app-bar{
     .menuA{
         min-width: 20svw;
     }
+
+
     .menuA.open {
         transform: scale(1);
-        
         transition: 0.5s;
     }
 
@@ -297,6 +315,10 @@ top-app-bar{
         transition-delay: 5s;
         transition: 0.5s;
     }
+
+
+
+
 
     .container{
         margin-top: 10svh;
