@@ -158,21 +158,7 @@ top-app-bar{
 
 
 
-.menuA.open ~ .container {
-    max-width: 95svw;
-    width: 95svw;
-    transition: 0.5s;
-}
 
-
-
-.menuA:not(.open){
-    position: relative;
-}
-
-.menuA.open{
-    position: absolute;
-}
 
 
 
@@ -261,6 +247,15 @@ top-app-bar{
 /*not pc screens*/
 @media (max-width: 990px) { 
 
+
+
+    .menuA:not(.open) ~ .container {
+        max-width: 98svw;
+        width: 95svw;
+        transition: 0.5s;
+    }
+    
+
     .menuA.open {
         transform: scale(1);
         transition: 0.5s;
@@ -295,6 +290,23 @@ top-app-bar{
 
 /*small phone displays*/
 @media (max-width: 470px) { 
+
+
+    .menuA:not(.open) ~ .container {
+        max-width: 98svw;
+        width: 95svw;
+        transition: 0.5s;
+    }
+    
+
+    .menuA:not(.open){
+        position: absolute;
+    }
+    
+    .menuA.open{
+        position: relative;
+    }
+
 
     .menuA{
         min-width: 20svw;
@@ -346,6 +358,25 @@ top-app-bar{
 
 @media (min-width: 991px) { /*pc screens*/
 
+
+    .menuA.open ~ .container {
+        max-width: 98svw;
+        width: 95svw;
+        transition: 0.5s;
+    }
+    
+    
+    
+    .menuA:not(.open){
+        position: relative;
+    }
+    
+    .menuA.open{
+        position: absolute;
+    }
+
+
+
     .menuA:not(.open) {
         transform: scale(1);
         transition: 0.5s;
@@ -353,7 +384,6 @@ top-app-bar{
 
     .menuA.open {
         transform: scale(0);
-        max-width: 0;
         transition: 0.5s;
     }
 
