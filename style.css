@@ -160,7 +160,7 @@ top-app-bar{
 
 
 
-.menuA:not(.open) ~ .container {
+.menuA.open ~ .container {
     max-width: 95svw;
     width: 95svw;
     transition: 0.5s;
@@ -171,18 +171,14 @@ top-app-bar{
 .menuA:not(.open) {
     transform: scale(1);
 
-    max-width: 0px;
-    width: 0px;
-
+    position: relative;
     transition: 0.5s;
 }
 
 .menuA.open {
     transform: scale(0);
     transition: 0.5s;
-    width: 100%;
-    max-width: 15svw;
-    min-width: 15svw;
+    position: absolute;
 }
 
 
@@ -274,8 +270,7 @@ top-app-bar{
 @media (max-width: 990px) { 
   
     .container{
-        margin-top: 10svh;
-        max-height: 80svh;
+        max-height: 90svh;
         max-width: 75svw;
         transition: 0.5s;
     }
@@ -292,38 +287,9 @@ top-app-bar{
 
 }
 
-/*small phone displays*/
-@media (max-width: 470px) { 
-
-    .container{
-        margin-top: 10svh;
-        max-height: 60svh;
-        max-width: 60svw;
-        transition: 0.5s;
-    }
-
-    #labelbtn{
-        visibility: hidden;
-        position: absolute;
-    }
-
-    #nolabelbtn{
-        visibility: visible;
-        position: relative;
-    }
-
-}
-
-
-
-
 
 
 @media (min-width: 991px) { /*pc screens*/
-
-
-
-
 
     md-fab:hover {
         transform: scale(0.8);

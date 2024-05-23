@@ -1,28 +1,23 @@
 import '@material/web/all.js';
 
-import '@material/web/all.js';
-
 document.addEventListener('DOMContentLoaded', () => {
-  const menuToggle = document.querySelector('.menutoggle'); // Select element with class 'menutoggle'
-  const menuA = document.querySelector('.menuA'); // Select element with class 'menuA'
+  const menuToggle = document.querySelector('.menutoggle'); // Select element with class 'menutoggle'
+  const menuA = document.querySelector('.menuA'); // Select element with class 'menuA'
 
-  let isActive = false; // Flag to track active state
+  let isActive = false; // Flag to track active state
 
-  menuToggle.addEventListener('click', () => {
-    isActive = !isActive; // Toggle flag on each click
+  menuToggle.addEventListener('click', () => {
+    isActive = !isActive; // Toggle flag on each click
+    menuA.classList.toggle('open'); // Add/remove 'active' class
 
-    const menuPosition = getComputedStyle(menuA).position;  // Get computed style for 'position'
-
-    if (menuPosition === 'absolute') {
-      menuA.setAttribute('open', true);  // Set 'open' attribute to true only if position is absolute
-      console.log('Menu A is now active (absolute positioning)!'); // Print message on activation
-    } else if (menuPosition === 'relative') {
-      menuA.removeAttribute('open');     // Remove 'open' attribute if position is relative
-      console.log('Menu A is now inactive (relative positioning)!'); // Print message on deactivation
-    } else {
-      console.warn('Unexpected position value for .menuA:', menuPosition);  // Warn about unexpected position values
-    }
-});
+    console.log('Menu toggle clicked, isActive:', isActive); // Print current state of isActive
+    
+    if (isActive) {
+      console.log('Menu A is now active!'); // Print message on activation
+    } else {
+      console.log('Menu A is now inactive!'); // Print message on deactivation
+    }
+  });
 
 
   // Select all `<md-fab>` elements
