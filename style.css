@@ -160,6 +160,34 @@ top-app-bar{
 
 
 
+.menuA:not(.open) ~ .container {
+    max-width: 95svw;
+    width: 95svw;
+    transition: 0.5s;
+}
+
+
+
+.menuA:not(.open) {
+    transform: scale(1);
+
+    max-width: 0px;
+    width: 0px;
+
+    transition: 0.5s;
+}
+
+.menuA.open {
+    transform: scale(0);
+    transition: 0.5s;
+    width: 100%;
+    max-width: 15svw;
+    min-width: 15svw;
+}
+
+
+
+
 
 
 /*material 3 table type shit*/
@@ -183,8 +211,6 @@ top-app-bar{
     border-color: inherit;
 }
 
-
-  
 .mtr > td,
 .mtr > th {
   border-block-start: 1px solid var(--md-sys-color-outline-variant);
@@ -246,29 +272,7 @@ top-app-bar{
 
 /*not pc screens*/
 @media (max-width: 990px) { 
-
-
-
-    .menuA:not(.open) ~ .container {
-        max-width: 98svw;
-        width: 95svw;
-        transition: 0.5s;
-    }
-    
-
-    .menuA.open {
-        transform: scale(1);
-        transition: 0.5s;
-    }
-    
-    .menuA:not(.open) {
-
-        transform: scale(0);
-        max-width: 0;
-        transition-delay: 5s;
-        transition: 0.5s;
-    }
-
+  
     .container{
         margin-top: 10svh;
         max-height: 80svh;
@@ -290,47 +294,6 @@ top-app-bar{
 
 /*small phone displays*/
 @media (max-width: 470px) { 
-
-
-    .menuA:not(.open) ~ .container {
-        max-width: 98svw;
-        width: 95svw;
-        transition: 0.5s;
-    }
-    
-
-    .menuA:not(.open){
-        position: absolute;
-    }
-    
-    .menuA.open{
-        position: relative;
-    }
-
-
-    .menuA{
-        min-width: 20svw;
-    }
-
-
-    .menuA.open {
-        transform: scale(1);
-        transition: 0.5s;
-    }
-
-
-    
-    
-    .menuA:not(.open) {
-        transform: scale(0);
-        max-width: 0;
-        transition-delay: 5s;
-        transition: 0.5s;
-    }
-
-
-
-
 
     .container{
         margin-top: 10svh;
@@ -359,33 +322,7 @@ top-app-bar{
 @media (min-width: 991px) { /*pc screens*/
 
 
-    .menuA.open ~ .container {
-        max-width: 98svw;
-        width: 95svw;
-        transition: 0.5s;
-    }
-    
-    
-    
-    .menuA:not(.open){
-        position: relative;
-    }
-    
-    .menuA.open{
-        position: absolute;
-    }
 
-
-
-    .menuA:not(.open) {
-        transform: scale(1);
-        transition: 0.5s;
-    }
-
-    .menuA.open {
-        transform: scale(0);
-        transition: 0.5s;
-    }
 
 
     md-fab:hover {
