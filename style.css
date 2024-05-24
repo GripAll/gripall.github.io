@@ -91,22 +91,7 @@ top-app-bar{
 }
 
 
-.txth {
-    font-weight: bold;
-    font-size: small;
-}
 
-.menuA {
-    background-color: var(--md-sys-color-surface);
-    z-index: 2;
-    border-radius: 25px;
-    height: 80svh;
-    margin-top: 10svh;
-    width: 100%;
-    max-width: 15svw;
-    min-width: 15svw;
-    padding: auto;
-}
 
 
 
@@ -156,16 +141,33 @@ top-app-bar{
     height: fit-content;
 }
 
+.txth {
+    font-weight: bold;
+    font-size: small;
+}
 
 
 
 
+/*sidebar stuff*/
 .menuA.open ~ .container {
     max-width: 95svw;
     width: 95svw;
     transition: 0.5s;
 }
 
+
+.menuA {
+    background-color: var(--md-sys-color-surface);
+    z-index: 2;
+    border-radius: 25px;
+    height: 80svh;
+    margin-top: 10svh;
+    width: 100%;
+    max-width: 15svw;
+    min-width: 15vw;
+    padding: auto;
+}
 
 
 .menuA:not(.open) {
@@ -181,7 +183,7 @@ top-app-bar{
     position: absolute;
 }
 
-
+/*sidebar stuff end*/
 
 
 
@@ -268,6 +270,12 @@ top-app-bar{
 
 /*not pc screens*/
 @media (max-width: 990px) { 
+
+    .menuA {
+        max-width: 20svw;
+        min-width: 20svw;
+    }
+    
   
     .container{
         max-height: 90svh;
@@ -290,6 +298,14 @@ top-app-bar{
 
 
 @media (min-width: 991px) { /*pc screens*/
+
+
+    
+    .menuA {
+        max-width: 10svw;
+        min-width: 10svw;
+    }
+
 
     md-fab:hover {
         transform: scale(0.8);
