@@ -13428,46 +13428,59 @@ MdOutlinedTextField = __decorate([
     t$3('md-outlined-text-field')
 ], MdOutlinedTextField);
 
-document.addEventListener('DOMContentLoaded', () => {
-  const menuToggle = document.querySelector('.menutoggle'); // Select element with class 'menutoggle'
-  const menuA = document.querySelector('.menuA'); // Select element with class 'menuA'
+document.addEventListener('click', function(event) {
+  // Check if clicked element is an md-primary-tab
+  if (event.target.matches('md-primary-tab')) {
+    const clickedTab = event.target;
 
-  let isActive = false; // Flag to track active state
+    // Check if the md-primary-tab has a TAB property that's a string
+    if (clickedTab.hasAttribute('TAB') && typeof clickedTab.getAttribute('TAB') === 'string') {
+      const targetId = clickedTab.getAttribute('TAB');
 
-  menuToggle.addEventListener('click', () => {
-    isActive = !isActive; // Toggle flag on each click
-    menuA.classList.toggle('open'); // Add/remove 'active' class
+      // Find element with the target ID
+      const targetElement = document.getElementById(targetId);
 
-    console.log('Menu toggle clicked, isActive:', isActive); // Print current state of isActive
-    
-    if (isActive) {
-      console.log('Menu A is now active!'); // Print message on activation
-    } else {
-      console.log('Menu A is now inactive!'); // Print message on deactivation
-    }
-  });
+      // Function to handle transitions (modified to handle both show and hide)
+      const handleTransition = (element, show) => {
+        element.style.transition = 'opacity 0.3s ease-in-out, transform 0.3s ease-in-out'; // Set transition properties
 
-
-  // Select all `<md-fab>` elements
-  const fabElements = document.querySelectorAll('md-fab');
-
-  // Loop through each `<md-fab>` element
-  fabElements.forEach(fab => {
-    fab.addEventListener('click', (event) => {
-      const href = fab.getAttribute('href'); // Get the value of the 'href' attribute
-
-      if (href) {
-        const target = fab.getAttribute('target'); // Check for the 'target' attribute
-        if (target === '_blank') {
-          // Open the URL in a new tab (existing behavior)
-          window.open(href, '_blank');
+        if (show) {
+          element.style.opacity = 1;
+          element.style.transform = 'scale(1)';
         } else {
-          // Open the URL in the current tab (new behavior)
-          window.location.href = href;
-          // Optional: Prevent default behavior for the original click event
-          event.preventDefault();
+          element.style.opacity = 0;
+          element.style.transform = 'scale(0)';
         }
+
+        // Set visibility and position after transition
+        setTimeout(() => {
+          element.style.visibility = show ? 'visible' : 'hidden';
+          element.style.position = show ? 'relative' : 'absolute';
+          element.style.transition = ''; // Reset transition after animation
+        }, 300); // Adjust timeout based on transition duration
+      };
+
+      // Handle hiding previously visible element
+      const previousVisibleElement = document.querySelector('.previously-visible');
+      if (previousVisibleElement) {
+        handleTransition(previousVisibleElement, false);
+        previousVisibleElement.classList.remove('previously-visible');
       }
-    });
-  });
+
+      // Show the target element based on the clicked tab's TAB property
+      if (targetElement) {
+        // Check if target element is directly parented by the body
+        if (targetElement.parentNode === document.body) {
+          handleTransition(targetElement, true); // Use handleTransition for showing too
+          targetElement.classList.add('previously-visible'); // Mark currently visible element
+        } else {
+          console.warn('Clicked md-primary-tab references an element not directly parented by body:', targetId);
+        }
+      } else {
+        console.warn('Clicked md-primary-tab references a non-existent ID: ', targetId);
+      }
+    } else {
+      console.warn('Clicked md-primary-tab is missing a TAB property or the TAB property is not a string.');
+    }
+  }
 });

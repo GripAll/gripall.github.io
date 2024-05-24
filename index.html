@@ -11,52 +11,48 @@
 
 
 
+
 <body>
-   <top-app-bar>
-        <md-icon-button class="menutoggle">
-          <md-icon>menu</md-icon>
-        </md-icon-button>
-        <p>website built by <a href="https://discordapp.com/users/666230610507071490">GripAll</a></p>
+  <script src="./bundle.js"></script>
+   <top-app-bar style="margin: 0 auto;">
+        <p class="credit">website built by <a href="https://discordapp.com/users/666230610507071490">GripAll</a></p>
+
+        <md-tabs class="maintabs">
+          <md-primary-tab active id="home" TAB="intro">
+            <md-icon slot="icon">piano</md-icon>
+            About
+          </md-primary-tab>
+          <md-primary-tab TAB="comissionpage">
+            <md-icon slot="icon">tune</md-icon>
+            Past work
+          </md-primary-tab>
+
+          <md-primary-tab>
+            <md-icon slot="icon">picture_as_pdf</md-icon>
+            Docs
+          </md-primary-tab>
+
+          <md-primary-tab>
+            <md-icon slot="icon">star</md-icon>
+            Reviews
+          </md-primary-tab>
+
+          <md-primary-tab>
+            <md-icon slot="icon">videogame_asset</md-icon>
+            Open
+          </md-primary-tab>
+        </md-tabs>
+    
    </top-app-bar>
 
 
-  <script src="./bundle.js"></script>
-
-  <div class="menuA">
-
-    <table class="menutable">
-      <tr class="menurow">
-        <td class="btnh">
-
-          <md-fab href="/pastwork.html" id="labelbtn" label="Past work">
-            <md-icon slot="icon">book</md-icon>
-          </md-fab>
-
-          <md-fab href="/pastwork.html" id="nolabelbtn">
-            <md-icon slot="icon">book</md-icon>
-          </md-fab>
-        </td>
-      </tr>
+  
 
 
-        <tr class="menurow">
-          <td class="btnh">
-            <md-fab inactive disabled id="labelbtn" label="Reviews">
-              <md-icon slot="icon">star_half</md-icon>
-            </md-fab>
-
-            <md-fab id="nolabelbtn">
-              <md-icon slot="icon">star_half</md-icon>
-            </md-fab>
-         </td>
-        </tr>
-
-   </table>
-  </div>
+<div class="container" id="intro">
 
 
-  <div class="container" id="intro">
-
+    
     <h1>About me</h1>
     <p>My services include selling pre-made assets, taking commissions, and accepting long-term partnerships.</p>
     
@@ -67,7 +63,8 @@
     <p><em>Please note that I do not give assets upfront, except for long-term partners and trusted individuals.</em></p>
     
 
-
+  
+  <div class="mainmtables" style="display:grid;">
     <p><h3>The payment options are included in the following table:</h3></p>
     <table class="mtable">
       <thead class="mhead">
@@ -107,8 +104,56 @@
 
       </tbody>
     </table>
-    
+
+  </div> 
+</div>
+
+
+
+
+
+
+
+
+
+<div class="container" id="comissionpage">
+
+  <h1>Past work</h1>
+
+  <div class="comission">
+    <iframe src="https://pixeldrain.com/d/W328k6cb" style="border: none; border-radius: 8px;"></iframe>
   </div>
+
+  <div class="comission">
+    <iframe src="https://pixeldrain.com/d/u2WHvuu7" style="border: none;  border-radius: 8px;"></iframe>
+  </div>
+
+
+  <div class="comission">
+    <iframe src="https://pixeldrain.com/d/WRr5eXfa" style="border: none; border-radius: 8px;"></iframe>
+  </div>
+
+
+  <div class="comission">
+    <iframe src="https://pixeldrain.com/d/tnFcDNdj" style="border: none;  border-radius: 8px;"></iframe>
+  </div>
+
+
+  <div class="comission">
+    <iframe src="https://pixeldrain.com/d/B7DM4SKE" style="border: none; border-radius: 8px;"></iframe>
+  </div>
+
+  <div class="comission">
+    <iframe src="https://pixeldrain.com/d/XmLg5q3c" style="border: none; border-radius: 8px;"></iframe>
+  </div>
+
+
+  <div class="comission">
+    <iframe src="https://pixeldrain.com/d/tPm6wgB2" style="border: none; border-radius: 8px;"></iframe>
+  </div>
+
+</div>
+
 
 </body>
 </html>
