@@ -125,6 +125,7 @@ top-app-bar{
     justify-content: center;
     visibility: hidden;
     position: absolute;
+    overflow-x: hidden;
 }
 
 #reviewspage{
@@ -145,6 +146,8 @@ top-app-bar{
     justify-content: center;
     min-width: 80svw;
     width: 80svw;
+
+    height: 70svh;
     margin: 10px;
     border-radius: var(--video-shape-xl);
 }
