@@ -9,6 +9,7 @@
     --md-ref-typeface-plain: system-ui;
     --shapeOne: 28px;
     --catalog-shape-xl:28px;
+    --video-shape-xl:20px;
   }
   
   /* Light mode styles */
@@ -127,6 +128,7 @@ top-app-bar{
     min-width: 80svw;
     width: 80svw;
     margin: 10px;
+    border-radius: var(--video-shape-xl);
 }
 
 iframe{
