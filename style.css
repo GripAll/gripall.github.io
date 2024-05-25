@@ -72,6 +72,32 @@ body {
 }
 
 
+top-app-bar{
+    display: flex;
+    position: absolute;
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin: 0 auto;
+
+
+    background-color:var(--md-sys-color-surface-container) ;
+
+    height: 10svh;
+    width: 100svw;
+
+    justify-content: center;
+    z-index: 3;
+
+}
+
+
+.maintabs{
+    overflow: hidden;
+    overflow-x: hidden;
+}
+
+
 
 #intro{
     overflow-x: hidden;
@@ -111,22 +137,6 @@ iframe{
 
 
 
-top-app-bar{
-
-    display: flex;
-    position: absolute;
-    overflow-x:hidden;
-
-
-    background-color:var(--md-sys-color-surface-container) ;
-
-    height: 10svh;
-    width: 100svw;
-
-    align-items: center;
-    z-index: 3;
-
-}
 
 
 
