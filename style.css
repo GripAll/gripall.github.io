@@ -31,7 +31,7 @@
   /* Dark mode styles */
   @media (prefers-color-scheme: dark) {
     :root {
-      --md-sys-color-outline-variant:#D5C4AE;
+      --md-sys-color-outline-variant:#ffffff;
       --md-fab-container-color:black;
       --md-sys-color-primary: #ffc107; /* Dark mode primary color (example) */
       --md-sys-color-secondary: #e6c188; /* Dark mode secondary color (example) */
@@ -73,7 +73,9 @@ body {
 
 
 
-
+#intro{
+    overflow-x: hidden;
+}
 
 
 
@@ -92,13 +94,6 @@ body {
 
 
 
-
-#intro:not()
-
-
-
-
-
 .comission{
     display: flex;
     justify-content: center;
@@ -112,14 +107,6 @@ iframe{
     width: 800px;
     height: 500px;
 }
-
-
-#home:active{
-    color: black;
-    width: 500px;
-}
-
-
 
 
 
