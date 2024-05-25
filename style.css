@@ -215,7 +215,7 @@ iframe{
 .mtr > th {
   border-block-start: 1px solid var(--md-sys-color-outline-variant);
   border-inline-start: 1px solid var(--md-sys-color-outline-variant);
-  padding: 8px 16px;
+  padding: 5px 10px;
 }
 
 .mtr:last-of-type td,
