@@ -51,12 +51,15 @@ html {
     padding: 0;
     color:var(--md-sys-color-on-surface);
     overflow: hidden;
+    overflow-x: hidden;
 }
 
 
 body {
+
     display: flex;
     justify-content: center;
+    overflow-x: hidden;
     margin: 0;
     padding: 0;
     background-color:var(--md-sys-color-surface-container) ;
