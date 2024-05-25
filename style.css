@@ -94,6 +94,11 @@ top-app-bar{
 }
 
 
+.credit{
+    text-align: center;
+}
+
+
 .maintabs{
     overflow: hidden;
     overflow-x: hidden;
