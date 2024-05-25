@@ -16,7 +16,7 @@
   @media (prefers-color-scheme: light) {
     :root {
      /*--md-fab-container-color:#f1d3f9;*/
-
+      --disord-widget-theme-link: "https://discord.com/widget?id=1015934274924445736&theme=light";
       --md-sys-color-outline-variant:#D5C4AE;
       --md-sys-color-primary: #6442d6; /* Light mode primary color */
       --md-sys-color-secondary: #5d5d74; /* Light mode secondary color */
@@ -32,6 +32,7 @@
   /* Dark mode styles */
   @media (prefers-color-scheme: dark) {
     :root {
+      --disord-widget-theme-link: "https://discord.com/widget?id=1015934274924445736&theme=dark";
       --md-sys-color-outline-variant:#000000;
       --md-fab-container-color:black;
       --md-sys-color-primary: #ffc107; /* Dark mode primary color (example) */
