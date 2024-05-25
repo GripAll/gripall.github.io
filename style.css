@@ -16,15 +16,16 @@
   @media (prefers-color-scheme: light) {
     :root {
      /*--md-fab-container-color:#f1d3f9;*/
-      --disord-widget-theme-link: "https://discord.com/widget?id=1015934274924445736&theme=light";
-      --md-sys-color-outline-variant:#D5C4AE;
-      --md-sys-color-primary: #6442d6; /* Light mode primary color */
-      --md-sys-color-secondary: #5d5d74; /* Light mode secondary color */
-      --md-sys-color-background: #fff8f3; /* Light mode background color */
-      --md-sys-color-surface: #fff8f3; /* Light mode surface color */
-      --md-sys-color-surface-container:#f8ecde; /* Light mode surface container color */
+      --md-primary-tab-container-color:#f2ecee; /*tab buttons background holder */
+      --md-sys-color-outline-variant:var(--md-primary-tab-container-color); /* borders color */
+      --md-sys-color-outline-table:#000000; /* table borders color */
+      --md-sys-color-primary: #6442d6; /*  primary color */
+      --md-sys-color-secondary: #5d5d74; /* secondary color */
+      --md-sys-color-background: #ffffff; /* background color */
+      --md-sys-color-surface: #fff8f3; /*  surface color */
+      --md-sys-color-surface-container:#F8F1F6; /* surface container color */
 
-      --md-sys-color-surface-dim:#dabc9a;
+      --md-sys-color-surface-dim:#ededed;
 
     }
   }
@@ -32,15 +33,17 @@
   /* Dark mode styles */
   @media (prefers-color-scheme: dark) {
     :root {
-      --disord-widget-theme-link: "https://discord.com/widget?id=1015934274924445736&theme=dark";
-      --md-sys-color-outline-variant:#000000;
+
+      --md-primary-tab-container-color:#ededed; /* tab buttons background holder */
+      --md-sys-color-outline-variant:var(--md-primary-tab-container-color); /* borders color */
+      --md-sys-color-outline-table:#000000; /* table borders color */
       --md-fab-container-color:black;
-      --md-sys-color-primary: #ffc107; /* Dark mode primary color (example) */
-      --md-sys-color-secondary: #e6c188; /* Dark mode secondary color (example) */
-      --md-sys-color-background: #212121; /* Dark mode background color (example) */
+      --md-sys-color-primary: #cbbeff; /* primary color */
+      --md-sys-color-secondary: #e6c188; /* secondary color */
+      --md-sys-color-background: #212121; /* background color */
       --md-sys-color-surface-variant:#504534;
-      --md-sys-color-surface: #18130b; /* Dark mode surface color (example) */
-      --md-sys-color-surface-container:#251f16; /* Dark mode surface container color (example) */
+      --md-sys-color-surface: #18130b; /* surface color */
+      --md-sys-color-surface-container:#251f16; /* surface container color */
       --md-sys-color-on-surface:#ede1d3;
       --md-sys-color-surface-variant:#504534;
     }
@@ -65,7 +68,7 @@ body {
     overflow-x: hidden;
     margin: 0;
     padding: 0;
-    background-color:var(--md-sys-color-surface-container) ;
+    background-color:var(--md-sys-color-background) ;
     width: 100svw;
     height: 100svh;
     animation: scale-up 0.5s ease-in-out;
@@ -84,7 +87,7 @@ top-app-bar{
     border: 0;
 
 
-    background-color:var(--md-sys-color-surface-container) ;
+    background-color:var(--md-sys-color-surface-dim) ;
 
     height: 10svh;
     width: 100svw;
@@ -109,6 +112,7 @@ top-app-bar{
 .maintabs{
     overflow: hidden;
     overflow-x: hidden;
+    background-color:var(--md-sys-color-surface-container) ;
 }
 
 
@@ -188,7 +192,7 @@ iframe{
     margin: 0 auto;
 
     border-radius: var(--shapeOne);
-    background-color:var(--md-sys-color-surface) ;
+    background-color:var(--md-sys-color-surface-container) ;
 
     margin-bottom: 0;
 
@@ -238,19 +242,19 @@ iframe{
 
 .mtr > td,
 .mtr > th {
-  border-block-start: 1px solid var(--md-sys-color-outline-variant);
-  border-inline-start: 1px solid var(--md-sys-color-outline-variant);
+  border-block-start: 1px solid var(--md-sys-color-outline-table);
+  border-inline-start: 1px solid var(--md-sys-color-outline-table);
   padding: 5px 10px;
 }
 
 .mtr:last-of-type td,
 .mtr:last-of-type th {
-  border-block-end: 1px solid var(--md-sys-color-outline-variant);
+  border-block-end: 1px solid var(--md-sys-color-outline-table);
 }
 
 .mtr td:last-of-type,
 .mtr th:last-of-type {
-  border-inline-end: 1px solid var(--md-sys-color-outline-variant);
+  border-inline-end: 1px solid var(--md-sys-color-outline-table);
 }
 
 .mtr > th {
