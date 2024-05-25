@@ -69,6 +69,8 @@ body {
 
 
 
+
+
 #comissionpage{
     padding: 20px;
     display: grid;
@@ -76,6 +78,15 @@ body {
     visibility: hidden;
     position: absolute;
 }
+
+
+
+
+
+
+
+
+#intro:not()
 
 
 
