@@ -31,7 +31,8 @@
   /* Dark mode styles */
   @media (prefers-color-scheme: dark) {
     :root {
-    --md-fab-container-color:black;
+      --md-sys-color-outline-variant:#D5C4AE;
+      --md-fab-container-color:black;
       --md-sys-color-primary: #ffc107; /* Dark mode primary color (example) */
       --md-sys-color-secondary: #e6c188; /* Dark mode secondary color (example) */
       --md-sys-color-background: #212121; /* Dark mode background color (example) */
@@ -128,7 +129,7 @@ top-app-bar{
     display: flex;
     position: absolute;
     overflow-x:hidden;
-    
+
 
     background-color:var(--md-sys-color-surface-container) ;
 
