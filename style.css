@@ -34,21 +34,26 @@
   @media (prefers-color-scheme: dark) {
     :root {
 
-      --md-primary-tab-container-color:#ededed; /* tab buttons background holder */
+      --md-primary-tab-container-color:#000000; /* tab buttons background holder */
       --md-sys-color-outline-variant:var(--md-primary-tab-container-color); /* borders color */
       --md-sys-color-outline-table:#000000; /* table borders color */
       --md-fab-container-color:black;
-      --md-sys-color-primary: #cbbeff; /* primary color */
+      --md-sys-color-primary: tomato; /* primary color */
       --md-sys-color-secondary: #e6c188; /* secondary color */
       --md-sys-color-background: #212121; /* background color */
       --md-sys-color-surface-variant:#504534;
-      --md-sys-color-surface: #18130b; /* surface color */
-      --md-sys-color-surface-container:#251f16; /* surface container color */
-      --md-sys-color-on-surface:#ede1d3;
+      --md-sys-color-surface: #E6E1E3; /* surface color */
+      --md-sys-color-surface-container:#1C1B1D; /* surface container color */
+      --md-sys-color-surface-container-table:#1C1B1D; /* table header surface color */
+      --h1-color:tomato;
+      --h3-color:skyblue;
+      --a-color:blue;
+      --md-sys-color-surface-dim:#1c1c1c;
+      --md-sys-color-on-surface:white;
       --md-sys-color-surface-variant:#504534;
     }
   }
-  
+ 
 
 
 html {
@@ -74,6 +79,18 @@ body {
     animation: scale-up 0.5s ease-in-out;
 
 
+}
+
+h1{
+    color: var(--h1-color);
+}
+
+h3{
+    color: var(--h3-color);
+}
+
+a{
+    color: var(--a-color);
 }
 
 
@@ -120,7 +137,6 @@ top-app-bar{
 #intro{
     overflow-x: hidden;
 }
-
 
 
 
@@ -258,7 +274,7 @@ iframe{
 }
 
 .mtr > th {
-  background-color: var(--md-sys-color-surface-container);
+  background-color: var(--md-sys-color-surface-table-container);
   text-shadow: 0 1px 1px var(--md-sys-color-surface-container-lowest);
   color: var(--md-sys-color-on-surface);
   font-size: 1.25em;
