@@ -5,27 +5,35 @@
 
 :root {
     /* Base styles (common for both light and dark mode) */
-    --md-ref-typeface-brand: 'Open Sans';
-    --md-ref-typeface-plain: system-ui;
-    --shapeOne: 28px;
-    --catalog-shape-xl:28px;
-    --video-shape-xl:20px;
+    --md-ref-typeface-brand: 'Roboto';
   }
   
   /* Light mode styles */
   @media (prefers-color-scheme: light) {
     :root {
      /*--md-fab-container-color:#f1d3f9;*/
-      --md-primary-tab-container-color:#f2ecee; /*tab buttons background holder */
+      --md-primary-tab-container-color:#FFFFFF; /*tab buttons background holder */
       --md-sys-color-outline-variant:var(--md-primary-tab-container-color); /* borders color */
-      --md-sys-color-outline-table:#000000; /* table borders color */
-      --md-sys-color-primary: #6442d6; /*  primary color */
-      --md-sys-color-secondary: #5d5d74; /* secondary color */
-      --md-sys-color-background: #ffffff; /* background color */
-      --md-sys-color-surface: #fff8f3; /*  surface color */
-      --md-sys-color-surface-container:#F8F1F6; /* surface container color */
 
-      --md-sys-color-surface-dim:#ededed;
+      --md-sys-color-outline-table:#000000; /* table borders color */
+      --table-header:#e0ebffe0; /* table header surface color */
+
+      --md-sys-color-primary: #4D8FFE; /*  primary color */
+      --md-sys-color-secondary: #040404; /* secondary color */
+      --md-sys-color-background: #EEEEEE; /* background color */
+      --md-sys-color-surface: #323232; /*  surface color */
+      --md-sys-color-surface-container:#FFFFFF; /* surface container color */
+
+
+      --md-sys-color-appbar:#ededed;
+
+      --h3-color:var(--md-sys-color-primary);
+      --h1-color:tomato;
+      --a-color:blue;
+
+      --shapeOne: 15px;
+      --catalog-shape-xl:15px;
+      --video-shape-xl:15px;
 
     }
   }
@@ -34,30 +42,37 @@
   @media (prefers-color-scheme: dark) {
     :root {
 
-      --md-primary-tab-container-color:#000000; /* tab buttons background holder */
+      --md-primary-tab-container-color:#212121; /* tab buttons background holder */
       --md-sys-color-outline-variant:var(--md-primary-tab-container-color); /* borders color */
+
       --md-sys-color-outline-table:#000000; /* table borders color */
+      --table-header:#5D6BC0; /* table header surface color */
+
       --md-fab-container-color:black;
-      --md-sys-color-primary: tomato; /* primary color */
+      --md-sys-color-primary: #4D8FFE; /* primary color */
       --md-sys-color-secondary: #e6c188; /* secondary color */
-      --md-sys-color-background: #212121; /* background color */
+      --md-sys-color-background: rgb(0,0,0); /* background color */
       --md-sys-color-surface-variant:#504534;
-      --md-sys-color-surface: #E6E1E3; /* surface color */
-      --md-sys-color-surface-container:#1C1B1D; /* surface container color */
-      --md-sys-color-surface-container-table:#1C1B1D; /* table header surface color */
+      --md-sys-color-surface: #F5F5F5; /* surface color */
+      --md-sys-color-surface-container:#212121; /* surface container color */
+      --h3-color:var(--md-sys-color-primary);
       --h1-color:tomato;
-      --h3-color:skyblue;
       --a-color:blue;
-      --md-sys-color-surface-dim:#1c1c1c;
+      --md-sys-color-appbar:#000000;
       --md-sys-color-on-surface:white;
       --md-sys-color-surface-variant:#504534;
+
+
+      --shapeOne: 15px;
+      --catalog-shape-xl:15px;
+      --video-shape-xl:15px;
     }
   }
  
 
 
 html {
-    font-family: Google Sans, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     color:var(--md-sys-color-on-surface);
@@ -104,7 +119,7 @@ top-app-bar{
     border: 0;
 
 
-    background-color:var(--md-sys-color-surface-dim) ;
+    background-color:var(--md-sys-color-appbar) ;
 
     height: 10svh;
     width: 100svw;
@@ -181,8 +196,9 @@ iframe{
 
 
 
-
-
+p,h2,span{
+    color:var(--md-sys-color-surface);
+}
 
 
 /*topbar buttons*/
@@ -245,6 +261,7 @@ iframe{
 
 
 .mhead{
+    background-color: var(--table-header);
     display: table-header-group;
     vertical-align: middle;
     border-color: inherit;
