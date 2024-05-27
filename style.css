@@ -6,6 +6,7 @@
 :root {
     /* Base styles (common for both light and dark mode) */
     --md-ref-typeface-brand: 'Roboto';
+    --tabs-border:15px;
   }
   
   /* Light mode styles */
@@ -203,7 +204,7 @@ p,h2,span{
 
 /*topbar buttons*/
 .maintabs {
-    border-radius: 20px;
+    border-radius: var(--tabs-border);
     width: 100%;
 }
 
@@ -345,6 +346,13 @@ p,h2,span{
 
 /*not pc screens*/
 @media (max-width: 990px) { 
+
+    /*topbar buttons*/
+    .maintabs {
+        border-radius: 0px;
+        transition: 1s;
+    }
+
 
     .credit{
         position: absolute;
