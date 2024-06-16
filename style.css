@@ -10,7 +10,7 @@
   }
   
   /* Light mode styles */
-  @media (prefers-color-scheme: dark) {
+  @media (prefers-color-scheme: light) {
     :root {
      /*--md-fab-container-color:#f1d3f9;*/
       --md-primary-tab-container-color:#FFFFFF; /*tab buttons background holder */
@@ -40,7 +40,7 @@
   }
   
   /* Dark mode styles */
-  @media (prefers-color-scheme: light) {
+  @media (prefers-color-scheme: dark) {
     :root {
 
       --md-primary-tab-container-color:#212121; /* tab buttons background holder */
