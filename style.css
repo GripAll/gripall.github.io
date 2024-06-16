@@ -10,7 +10,7 @@
   }
   
   /* Light mode styles */
-  @media (prefers-color-scheme: light) {
+  @media (prefers-color-scheme: dark) {
     :root {
      /*--md-fab-container-color:#f1d3f9;*/
       --md-primary-tab-container-color:#FFFFFF; /*tab buttons background holder */
@@ -26,10 +26,10 @@
       --md-sys-color-surface-container:#FFFFFF; /* surface container color */
 
 
-      --md-sys-color-appbar:#ededed;
+      --md-sys-color-appbar:#dedede;
 
       --h3-color:var(--md-sys-color-primary);
-      --h1-color:tomato;
+      --h1-color:rgb(0, 0, 0);
       --a-color:blue;
 
       --shapeOne: 15px;
@@ -40,7 +40,7 @@
   }
   
   /* Dark mode styles */
-  @media (prefers-color-scheme: dark) {
+  @media (prefers-color-scheme: light) {
     :root {
 
       --md-primary-tab-container-color:#212121; /* tab buttons background holder */
@@ -97,8 +97,15 @@ body {
 
 }
 
+
+p {
+    padding: 0px;
+    margin: 0;
+}
+
 h1{
     color: var(--h1-color);
+    
 }
 
 h3{
@@ -272,19 +279,28 @@ p,h2,span{
     display: table-row-group;
     vertical-align: middle;
     border-color: inherit;
+
 }
 
 .mtr > td,
 .mtr > th {
+  height: 50px;
   border-block-start: 1px solid var(--md-sys-color-outline-table);
   border-inline-start: 1px solid var(--md-sys-color-outline-table);
   padding: 5px 10px;
+}
+
+
+.mtr > td{
+    font-size: 1.2em;
 }
 
 .mtr:last-of-type td,
 .mtr:last-of-type th {
   border-block-end: 1px solid var(--md-sys-color-outline-table);
 }
+
+
 
 .mtr td:last-of-type,
 .mtr th:last-of-type {
@@ -295,7 +311,7 @@ p,h2,span{
   background-color: var(--md-sys-color-surface-table-container);
   text-shadow: 0 1px 1px var(--md-sys-color-surface-container-lowest);
   color: var(--md-sys-color-on-surface);
-  font-size: 1.25em;
+  font-size: 1.5em;
 }
 
 
