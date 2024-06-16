@@ -24,7 +24,10 @@
       --md-sys-color-background: #EEEEEE; /* background color */
       --md-sys-color-surface: #323232; /*  surface color */
       --md-sys-color-surface-container:#FFFFFF; /* surface container color */
-
+     
+     
+      --tablebordersize: 1px;
+      --tablebordercolor: black;
 
       --md-sys-color-appbar:#dedede;
 
@@ -63,7 +66,8 @@
       --md-sys-color-on-surface:white;
       --md-sys-color-surface-variant:#504534;
 
-
+      --tablebordersize: 3px;
+      --tablebordercolor: blue;
       --shapeOne: 15px;
       --catalog-shape-xl:15px;
       --video-shape-xl:15px;
@@ -286,8 +290,8 @@ p,h2,span{
 .mtr > td,
 .mtr > th {
   height: 40px;
-  border-block-start: 1px solid var(--md-sys-color-outline-table);
-  border-inline-start: 1px solid var(--md-sys-color-outline-table);
+  border-block-start: var(--tablebordersize) solid var(--md-sys-color-outline-table);
+  border-inline-start: var(--tablebordersize) solid var(--md-sys-color-outline-table);
   padding: 5px 10px;
 }
 
