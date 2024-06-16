@@ -285,15 +285,28 @@ p,h2,span{
 
 .mtr > td,
 .mtr > th {
-  height: 50px;
+  height: 40px;
   border-block-start: 1px solid var(--md-sys-color-outline-table);
   border-inline-start: 1px solid var(--md-sys-color-outline-table);
   padding: 5px 10px;
 }
 
 
+.mtr > td:hover {
+    height: 50px;
+    border-block-start: 5px solid var(--md-sys-color-outline-table);
+    border-inline-start: 5px solid var(--md-sys-color-outline-table);
+    transition: 0.3s;
+}
+
+.mtr > td:not(:hover) {
+    transition: 0.3s;
+}
+
+
 .mtr > td{
     font-size: 1.2em;
+
 }
 
 .mtr:last-of-type td,
