@@ -133,6 +133,7 @@ top-app-bar{
     width: 100svw;
 
     justify-content: center;
+    align-items: center;
     z-index: 3;
 
 }
