@@ -1,0 +1,64 @@
+html {
+    background: #eee;
+  }
+  
+body {
+    line-height: 1.4;
+    max-width: 100svw;
+    margin: 0;
+    border: 0;
+}
+
+#comissionpage{
+  padding: 10px;
+  display: grid;
+  justify-content: left;
+  overflow-x: hidden;
+}
+
+
+.videoholder {
+  display: flex;
+  vertical-align: center;
+  align-items: center;
+
+  min-width: 50svw;
+  max-width: 80svw;
+  max-height: 60svh;
+  min-height: fit-content;
+}
+
+#videocaption{
+  max-height: 60svh;
+  min-height: max-content;
+  max-width: fit-content;
+}
+
+div > video{
+
+  max-width: 60svw;
+  max-height: 50svh;
+  border: 3px solid black;
+  margin: 10px;
+  scale: 0.1;opacity: 0;
+  animation: fade-in linear forwards;
+  animation-timeline: view();
+  animation-range: entry;
+}
+
+
+
+
+
+
+@keyframes fade-in {
+  from {scale:.2; opacity: 0;}
+  to {scale:1;opacity: 1;}
+}
+
+
+
+@keyframes scale-up {
+  from { transform: scale(0); }
+  to { transform: scale(1); }
+}
