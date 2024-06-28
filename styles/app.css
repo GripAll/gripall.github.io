@@ -26,8 +26,13 @@ md-toolbar,md-whiteframe,p{
   overflow-x: hidden;
 }
 
+md-tab{
+  border: 0px;
+  user-select: none;
+}
 
 md-button{
+  border: 0px;
   user-select: none;
 }
 
