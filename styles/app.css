@@ -1,3 +1,6 @@
+
+
+
 html {
     background: #eee;
   }
@@ -24,6 +27,7 @@ md-toolbar,md-whiteframe,p{
 }
 
 
+
 .videoholder {
   display: flex;
   vertical-align: center;
@@ -33,6 +37,14 @@ md-toolbar,md-whiteframe,p{
   max-width: 80svw;
   max-height: 60svh;
   min-height: fit-content;
+
+  transform: scale(1); /* Start at 0 scale */
+  transition: transform 5s ease-in-out; /* Smooth transition */
+}
+
+
+#comissionpage:target .videoholder { /* Target the container when scrolled to */
+  transform: scale(1); /* Scale to full size */
 }
 
 #videocaption{
@@ -49,7 +61,16 @@ div > video{
   margin: 10px;
 }
 
-
+.item {
+  width: 200px;
+  height: 200px;
+  margin: 50px auto;
+  padding-top: 75px;
+  background: rgba(255,85,0, .7);
+  text-align: center;
+  color: #4E4C48;
+  font-size: 1.5em;
+}
 
 
 

@@ -10,11 +10,14 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
   <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
 
+
+
   <link rel="stylesheet" href="styles/app.css">
-  <script src="scripts/app.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body ng-app="MyApp" ng-cloak>
+
 
   <md-content>
 
@@ -30,8 +33,6 @@
               <h2 class="md-flex">Comissions temporarily paused</h2>
             </div>
           </md-toolbar>
-
-
           <h1 id="about" class="md-display-1">About</h1>
 
           <md-whiteframe class="md-whiteframe-5dp" layout="column" flex-sm="45" flex-gt-sm="35" flex-gt-md="25" style="padding: 20px;">
@@ -107,7 +108,7 @@
               
 
         
-            <div class="videoholder">
+            <div data-aos="zoom-in-up" class="videoholder">
               <video title="Third person gun system" controls class="comission">
                   <source type="video/mp4" src="/media/raw_videos/tpsgunsystem_1.mp4">
               </video>
@@ -116,7 +117,7 @@
               </md-whiteframe>
             </div>
           
-            <div class="videoholder">
+            <div data-aos="zoom-in-up" class="videoholder">
               <video title="Inventory, looting,dropping system" controls class="comission">
                   <source type="video/mp4" src="/media/raw_videos/Inventory, looting, dropping system.mp4">
               </video>
@@ -125,7 +126,7 @@
               </md-whiteframe>
             </div>
           
-            <div class="videoholder">
+            <div data-aos="zoom-in-up" class="videoholder">
               <video title="Prompt,popup,notify,currency system" controls class="comission">
                   <source type="video/mp4" src="/media/raw_videos/prompt,popup,currency system.mp4">
               </video>
@@ -134,7 +135,7 @@
               </md-whiteframe>
             </div>
           
-            <div class="videoholder">
+            <div data-aos="zoom-in-up" class="videoholder">
               <video title="Responsive Admin panel" controls class="comission">
                   <source type="video/mp4" src="/media/raw_videos/responsiveUI_adminpanel.mp4">
               </video>
@@ -143,7 +144,7 @@
               </md-whiteframe>
             </div>
           
-            <div class="videoholder">
+            <div data-aos="zoom-in-up" class="videoholder">
               <video title="shop, code, system" controls class="comission">
                   <source type="video/mp4" src="/media/raw_videos/shop,code simple system.mp4">
               </video>
@@ -153,7 +154,7 @@
             </div>
           
           
-            <div class="videoholder">
+            <div data-aos="zoom-in-up" class="videoholder">
               <video title="medkit healing system" controls class="comission">
                   <source type="video/mp4" src="/media/raw_videos/medkit_tool_fps.mp4">
               </video>
@@ -161,7 +162,7 @@
                 <span><b>medkit healing system</b></span>  
               </md-whiteframe>
             </div>
-            
+
         </md-content>
       </md-tab>
       <md-tab label="Docs">
@@ -191,7 +192,12 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.2.5/angular-material.min.js"></script>
   
   <script src="scripts/app.js"></script>
-  
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+
 </body>
 
 </html>
