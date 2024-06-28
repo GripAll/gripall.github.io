@@ -12,7 +12,7 @@ body {
 
 
 md-toolbar,md-whiteframe,p{
-  animation: scale-up 1s ease-in-out;
+  animation: fade-in 1s ease-in-out;
 }
 
 
@@ -33,10 +33,6 @@ md-toolbar,md-whiteframe,p{
   max-width: 80svw;
   max-height: 60svh;
   min-height: fit-content;
-
-  animation: fade-in linear forwards;
-  animation-timeline: view();
-  animation-range: entry;
 }
 
 #videocaption{
