@@ -42,6 +42,9 @@ md-button{
   vertical-align: center;
   align-items: center;
 
+  padding: 20px;
+  margin: 20px;
+
   min-width: 50svw;
   max-width: 80svw;
   max-height: 60svh;
