@@ -13,7 +13,8 @@
 
 
   <link rel="stylesheet" href="styles/app.css">
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+  <link rel="stylesheet" href="styles/scroller.css"/>
 </head>
 
 <body ng-app="MyApp" ng-cloak>
@@ -27,13 +28,37 @@
       <md-tab label="About">
 
         <md-content class="md-padding" ng-controller="TabOne">
-
+          
           <md-toolbar class="md-warn">
             <div class="md-toolbar-tools">
               <h2 class="md-flex">Comissions temporarily paused</h2>
             </div>
           </md-toolbar>
           <h1 id="about" class="md-display-1">About</h1>
+
+      <div class="scroller" data-speed="fast">
+        <ul class="tag-list scroller__inner">
+
+          <li>
+            <md-button style="background-color: rgb(0, 255, 157); color: black;" class="md-raised md-primary">Web developer</md-button>
+          </li>
+          <li>
+            <md-button style="background-color: rgb(255, 55, 0); color: black;" href="https://rojo.space/docs/v7/" target="_blank" ng-click="href=www.google.com" class="md-raised md-primary">Rojo</md-button>
+          </li>
+          <li>
+            <md-button style="background-color: rgb(0, 119, 255); color: black;" href="https://sleitnick.github.io/Knit/docs/intro" target="_blank" ng-click="href=www.google.com" class="md-raised md-primary">Knit</md-button>
+          </li>
+          <li>
+            <md-button style="background-color: rgb(255, 255, 255); color: black;" class="md-raised md-primary">3 years of experience</md-button>
+          </li>
+
+          <li>
+            <md-button style="background-color: rgb(55, 0, 255); color: rgb(255, 255, 255);" href="https://www.guilded.gg/u/grip" target="_blank" ng-click="href=www.google.com" class="md-raised md-primary">I dont do sport games</md-button>
+          </li>
+        </ul>
+        </div>
+
+
 
           <md-whiteframe class="md-whiteframe-5dp" layout="column" flex-sm="45" flex-gt-sm="35" flex-gt-md="25" style="padding: 20px;">
             <span><b>Timezone: </b>My timezone is <b>CEST</b>, so I am available during  European hours.</span>
@@ -191,6 +216,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-messages.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.2.5/angular-material.min.js"></script>
   
+
+  <script src="scripts/infinite-scroll.js"></script>
   <script src="scripts/app.js"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
