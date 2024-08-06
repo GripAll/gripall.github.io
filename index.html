@@ -12,223 +12,48 @@
 
 
 
-  <link rel="stylesheet" href="styles/app.css">
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
-  <link rel="stylesheet" href="styles/scroller.css"/>
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="styles/scroller.css" />
+  <link rel="stylesheet" href="styles/button1.css" />
 </head>
 
-<body ng-app="MyApp" ng-cloak>
-
-
-  <md-content>
-
-
-    <md-tabs md-dynamic-height="" md-border-bottom="">
-
-      <md-tab label="About">
-
-        <md-content class="md-padding" ng-controller="TabOne">
-          
-          <md-toolbar class="md-warn">
-            <div class="md-toolbar-tools">
-              <h2 class="md-flex">Comissions temporarily paused</h2>
-            </div>
-          </md-toolbar>
-          <h1 id="about" class="md-display-1">About</h1>
-
-      <div class="scroller" data-speed="fast">
-        <ul class="tag-list scroller__inner">
 
 
 
- 
+<body>
 
-          <li>
-            <md-button style="background-color: rgb(0, 255, 157); color: black;" class="md-raised md-primary">Web developer</md-button>
-          </li>
-          <li>
-            <md-button style="background-color: rgb(255, 55, 0); color: black;" href="https://rojo.space/docs/v7/" target="_blank" ng-click="href=www.google.com" class="md-raised md-primary">Rojo</md-button>
-          </li>
-          <li>
-            <md-button style="background-color: rgb(0, 119, 255); color: black;" href="https://sleitnick.github.io/Knit/docs/intro" target="_blank" ng-click="href=www.google.com" class="md-raised md-primary">Knit</md-button>
-          </li>
-          <li>
-            <md-button style="background-color: rgb(255, 255, 255); color: black;" class="md-raised md-primary">3 years of experience</md-button>
-          </li>
+  <div class="page1-content">
+    <div class="magicbutton-container">
+      <a href="#" class="magicbutton">
 
-          <li>
-            <md-button style="background-color: rgb(55, 0, 255); color: rgb(255, 255, 255);" class="md-raised md-primary">I dont do sport games</md-button>
-          </li>
-        </ul>
-        </div>
+         <div class="magicbutton__content">
+            <span class="magicbutton__text">OOPS! This is under maintenance!</span>
+         </div>
+
+         <div class="magicbutton__shadow"></div>
+      </a>
+   </div>
 
 
 
-          <md-whiteframe class="md-whiteframe-5dp" layout="column" flex-sm="45" flex-gt-sm="35" flex-gt-md="25" style="padding: 20px;">
-            <span><b>Timezone: </b>My timezone is <b>CEST</b>, so I am available during  European hours.</span>
-            <span><b>Age:</b> 18 years old</span>
-            <span><b>Region: </b><a style="font-weight: bold;" href="https://en.wikipedia.org/wiki/Hungary">Hungary</a></span>
-          </md-whiteframe>
-
-
-          <h1 id="comm" class="md-display-1">Communication</h1>
-          I am always responsive to my client's messages.
-          I keep my clients updated on the progress of their projects.
-          If you have any questions dm me.
-          
-          <p><md-button style="background-color: #7289DA;" href="https://discord.com/users/666230610507071490" target="_blank" ng-click="href=www.google.com" class="md-raised md-primary">Discord</md-button>
-
-          <md-button style="background-color: rgb(255, 170, 0); color: black;" href="https://www.guilded.gg/u/grip" target="_blank" ng-click="href=www.google.com" class="md-raised md-primary">Guilded</md-button>
-          </p>
+  </div>
 
 
 
 
-          <h1 class="md-display-1">Payment methods</h1>
-          <p>I accept <b>Robux, Bank, Paypal and other</b>.</p>
-          
-          <p>I dont accept percentage of game earnings aka. <i>"Promised earnings"</i> </p>
-          <p>That means if your vision is something like this: <i>"when the game is popular ,when we release the game", im gonna pay you</i></p>
-          <p>Your request will probably be <span style="color: tomato;"><b>declined</b></span> <em>99.9%</em>.</p>
-
-          <p data-aos="zoom-in-up" ><md-button style="background-color: rgb(31, 91, 255);" href="https://www.paypal.com/paypalme/gripRBLX" target="_blank" ng-click="href=www.google.com" class="md-raised md-primary">Paypal</md-button>
-
-            <md-button style="background-color: rgb(85, 0, 255);" href="https://buy.stripe.com/00g6rO6tnedm2xWcMM" target="_blank" ng-click="href=www.google.com" class="md-raised md-primary">Stripe</md-button>
-          </p>
-          
-
-          <h1 data-aos="fade-up-right"  class="md-display-1">Certification</h1>
-          <p>I am a certified Roblox Lua scripter with over 3 years of experience.</p>
-          <p>You can check my vouches from Youtubers and other clients in my Discord server.</p>
-
-          <h1 data-aos="fade-up-left"  class="md-display-1">Status page</h1>
-          <p>You have the ability to check development logs and current status of mine and my local time on my status page.</p>
-          <p>On the status page you will be displayed as your discord ID (if requesting, I dont put full ID)</p>
-          
-          <h1 data-aos="zoom-in"  class="md-display-1">Effciency</h1>
-          <p>I can use frameworks to complete projects if needed. <i>Eg:. Knit</i></p>
-          
-          <h1 data-aos="zoom-in"  class="md-display-1">Attention to detail</h1>
-          <p>I test my scripts fully before sending them to my clients.</p>
-          <p>I am always ready to fix any bugs that are found.</p>
-          
-
-         
-          
-
-        </md-content>
-      </md-tab>
 
 
 
-    
-      <md-tab label="Past work">
-        <md-content style="overflow-y: hidden;" id="comissionpage" class="md-padding" ng-controller="AppCtrl">
-          <h1 class="md-display-2">Past work videos</h1>
-          
-          <div class="videoholder">
-            <video title="Inventory and hotbar system" controls class="comission">
-                <source type="video/mp4" src="media/raw_videos/advanced inventory and hotbar system.mp4">
-            </video>
-            <md-whiteframe id="videocaption" class="md-whiteframe-5dp" layout="column" flex-sm="45" flex-gt-sm="35" flex-gt-md="25" style="padding: 20px;">
-              <span><b>Inventory and hotbar system</b></span>  
-            </md-whiteframe>
-          </div>
-              
-
-        
-            <div data-aos="zoom-in-up" class="videoholder">
-              <video title="Third person gun system" controls class="comission">
-                  <source type="video/mp4" src="media/raw_videos/tpsgunsystem_1.mp4">
-              </video>
-              <md-whiteframe id="videocaption" class="md-whiteframe-5dp" layout="column" flex-sm="45" flex-gt-sm="35" flex-gt-md="25" style="padding: 20px;">
-                <span><b>Third person gun system</b></span>  
-              </md-whiteframe>
-            </div>
-          
-            <div data-aos="zoom-in-up" class="videoholder">
-              <video title="Inventory, looting,dropping system" controls class="comission">
-                  <source type="video/mp4" src="media/raw_videos/Inventory, looting, dropping system.mp4">
-              </video>
-              <md-whiteframe id="videocaption" class="md-whiteframe-5dp" layout="column" flex-sm="45" flex-gt-sm="35" flex-gt-md="25" style="padding: 20px;">
-                <span><b>Inventory, looting,dropping system</b></span>  
-              </md-whiteframe>
-            </div>
-          
-            <div data-aos="zoom-in-up" class="videoholder">
-              <video title="Prompt,popup,notify,currency system" controls class="comission">
-                  <source type="video/mp4" src="media/raw_videos/prompt,popup,currency system.mp4">
-              </video>
-              <md-whiteframe id="videocaption" class="md-whiteframe-5dp" layout="column" flex-sm="45" flex-gt-sm="35" flex-gt-md="25" style="padding: 20px;">
-                <span><b>Prompt,popup,notify,currency system</b></span>  
-              </md-whiteframe>
-            </div>
-          
-            <div data-aos="zoom-in-up" class="videoholder">
-              <video title="Responsive Admin panel" controls class="comission">
-                  <source type="video/mp4" src="media/raw_videos/responsiveUI_adminpanel.mp4">
-              </video>
-              <md-whiteframe id="videocaption" class="md-whiteframe-5dp" layout="column" flex-sm="45" flex-gt-sm="35" flex-gt-md="25" style="padding: 20px;">
-                <span><b>Responsive admin panel</b></span>  
-              </md-whiteframe>
-            </div>
-          
-            <div data-aos="zoom-in-up" class="videoholder">
-              <video title="shop, code, system" controls class="comission">
-                  <source type="video/mp4" src="media/raw_videos/shop,code simple system.mp4">
-              </video>
-              <md-whiteframe id="videocaption" class="md-whiteframe-5dp" layout="column" flex-sm="45" flex-gt-sm="35" flex-gt-md="25" style="padding: 20px;">
-                <span><b>Shop,code system</b></span>  
-              </md-whiteframe>
-            </div>
-          
-          
-            <div data-aos="zoom-in-up" class="videoholder">
-              <video title="medkit healing system" controls class="comission">
-                  <source type="video/mp4" src="media/raw_videos/medkit_tool_fps.mp4">
-              </video>
-              <md-whiteframe id="videocaption" class="md-whiteframe-5dp" layout="column" flex-sm="45" flex-gt-sm="35" flex-gt-md="25" style="padding: 20px;">
-                <span><b>medkit healing system</b></span>  
-              </md-whiteframe>
-            </div>
-
-        </md-content>
-      </md-tab>
-      <md-tab label="Docs">
-        <md-content class="md-padding">
-          <h1 class="md-display-2">Tab Three</h1>
-          <p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>
-        </md-content>
-      </md-tab>
-
-      <md-tab label="Hire" ng-disabled="true">
-        <md-content class="md-padding">
-          <h1 class="md-display-2">Tab Three</h1>
-          <p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>
-        </md-content>
-      </md-tab>
-    </md-tabs>
-    
- 
 
 
-  </md-content>
-  
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-animate.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-aria.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-messages.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.2.5/angular-material.min.js"></script>
-  
 
-  <script src="scripts/infinite-scroll.js"></script>
-  <script src="scripts/app.js"></script>
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+
+
   <script>
     AOS.init();
   </script>
-
-
 </body>
 
 </html>

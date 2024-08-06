@@ -1,0 +1,102 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --main-color: #00b786;
+  --main-under-color:#008461;
+
+  --black-color: hsl(194, 100%, 50%);
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Montserrat", sans-serif;
+  --normal-font-size: 1rem;
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+
+
+
+/*=============== BUTTON ===============*/
+.magicbutton-container {
+  height: 100vh;
+  margin-inline: 1.5rem;
+  display: grid;
+  place-items: center;
+}
+
+.magicbutton {
+  position: relative;
+  transition: transform .4s;
+}
+
+.magicbutton__content {
+  position: relative;
+  background: var(--main-color);
+  padding: 4rem 3rem;
+  border-radius: 10px;
+  color: var(--black-color);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  column-gap: .5rem;
+  overflow: hidden;
+
+
+  transition: transform 0.5s;
+}
+
+.magicbutton__text {
+  text-align: center;
+  z-index: 2;
+  color: white;
+  font-weight: 700;
+}
+
+.magicbutton__icon {
+  font-size: 1.5rem;
+}
+
+
+
+
+
+/* Gradient shadow */
+.magicbutton__shadow {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background: var(--main-under-color);
+  border-radius: 10px;
+  z-index: -1;
+
+  transform: translate(0,1rem);
+  transition: transform .3s;
+}
+
+/* View shadow gradient */
+.magicbutton:hover .magicbutton__content {
+  transform: translate(0, 1rem);
+}
+
+
+
+
+/* View geometric shapes */
+.magicbutton:hover {
+  transform: scale(1.1);
+}
+
+.magicbutton:hover img {
+  opacity: 1;
+}
