@@ -42,7 +42,7 @@
 .magicbutton__content {
   position: relative;
   background: var(--main-color);
-  padding: 4rem 3rem;
+  padding: 10rem 10rem;
   border-radius: 10px;
   color: var(--black-color);
   display: flex;
@@ -80,13 +80,13 @@
   border-radius: 10px;
   z-index: -1;
 
-  transform: translate(0,1rem);
+  transform: translate(0,5rem);
   transition: transform .3s;
 }
 
 /* View shadow gradient */
 .magicbutton:hover .magicbutton__content {
-  transform: translate(0, 1rem);
+  transform: translate(0, 5rem);
 }
 
 
