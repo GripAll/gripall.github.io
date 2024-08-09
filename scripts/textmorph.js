@@ -11,7 +11,8 @@ const elts = {
 const texts = [
 	"Hi",
 	"Im Grip",
-	"Im From Hungary",
+	"Im From",
+	"Hungary",
 	"Hire me now!",
 ];
 

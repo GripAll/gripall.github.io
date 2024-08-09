@@ -12,13 +12,15 @@
 
 
 body{
-    margin: 0;
-    padding: 0;
+    margin: auto 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     background-color: var(--bg-color);
+
+    overflow: hidden;
+
 }
 
 
@@ -31,10 +33,20 @@ body{
     flex-wrap: nowrap;
     width: 100svw;
     height: 50svh;
+    overflow: hidden;
 
   }
 
+  .morph-content {
+    display: flex;
+    justify-content: center;
 
+    width: 100svw;
+    height: 30svh;
+    overflow: hidden;
+    filter: url(#threshold) blur(0.6px);
+
+  }
 
   
   
@@ -45,8 +57,9 @@ body{
 
 h1{
     color: #aaaaaa;
-    font-size: 40pt;
+    font-size: 2rem;
     font-family: 'Starkiller', sans-serif;
+    
 
 }
 
@@ -82,27 +95,12 @@ h1{
 
 
 
-#container {
-	/* Center the text in the viewport. */
-    justify-content: left;
-    display: flex;
-	width: 100vw;
-	height: 80pt;
-	top: 0;
-	bottom: 0;
-	
-	/* This filter is a lot of the magic, try commenting it out to see how the morphing works! */
-	filter: url(#threshold) blur(0.6px);
-}
-
 /* Your average text styling */
 #text1, #text2 {
-	position: absolute;
-	width: 100%;
-	display: inline-block;
-	
+    display: flex;
+    position: absolute;
 	font-family: 'Starkiller', sans-serif;
-	font-size: 60pt;
+	font-size: 4rem;
     color: white;
 	
 	text-align: center;
