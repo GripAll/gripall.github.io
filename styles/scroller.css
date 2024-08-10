@@ -13,6 +13,7 @@
 
 .scroller {
     max-width: 80vw;
+    width: auto;
  }
 
 

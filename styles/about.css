@@ -7,22 +7,37 @@
     --bg-color: black;
     --block-color:#1d1e1f;
     --card-height: 10px;
-    --card-width: 100svw;
+    --card-width: 100%;
 }
 
 
 
 body {
-    margin: 0;
-    padding: 0;
     background-color: var(--bg-color);
+    margin: 0;
+    display: flex;
+    width: 100svw;
+}
+
+
+.exp-scroller{
+    margin-top: 20svh;
+    position: absolute;
+    justify-self: center;
+    width: 90svw;
+    margin-left: 10svw;
+    padding: 0;
+    margin-right: 10svw;
+    scale: 0.8;
+
 }
 
 
 h1{
-    font-size: 3rem;
+    position: absolute;
+   
+    font-size:3em;
     text-align: center;
-    padding: 20px;
     font-family: 'Star Wars', sans-serif;
     color: white;
     animation: 2s fadein;
@@ -38,41 +53,16 @@ h1{
 }
 
 
-
-.button-holder {
-
-    position: absolute;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-self: right;
-    top: 0;
-    right: 0;
-    padding-left: 20svw;
-    padding-top: 50px;
-    justify-content: left;
-    align-items: center;
-    width: 50svw;
-    height: 15vh;
-    z-index: 2;
+.neon-button,.neon-button1{
+    margin: 25svw;
+    width: min-content;
+    height: min-content;
+    scale: auto;
+    font-size: 2rem;
 }
 
 
-.backbutton {
 
-    position: absolute;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-self: right;
-    top: 0;
-    left: 0;
-    padding-left: 15svw;
-    padding-top: 50px;
-    justify-content: left;
-    align-items: center;
-    width: 50svw;
-    height: 15vh;
-    z-index: 2;
-}
 
 .page2-content{
     display: flex;
@@ -81,81 +71,57 @@ h1{
 }
 
 .page2-header {
-    display: flex;
+    top:2svh;
+    display:flex;
     width: 100svw;
-    height: 15svh;
-    padding-top: 50px;
+    height: 20svh;
     justify-content: center;
     align-items: center;
-    position: relative; /* Make .page2-header the positioned ancestor */
+    position: absolute; /* Make .page2-header the positioned ancestor */
+    z-index: 1;
+    margin: 0;
+
   }
   
-  .page2-header::after {
+  .whiteline {
+    top: 100%;
     position: absolute;
-    content: "";
-    top: calc(var(--card-height) / 6);
-    left: 0;
-    right: 0;
-    top: 120%;
-    z-index: -1;
-    height: var(--card-height);
-    width: var(--card-width);
-    margin: 0 auto;
-
-    transform: scale(0.8);
-
-
+    justify-self: center;
+    display: flex;
+    width: 80svw;
+    height: 1svh;
     background: white;
 
     transition: opacity .5s;
-    animation: anime 1s linear infinite;
   }
   
   
-.page2-content {
 
-    margin: 0;
-    padding: 0;
-    border: 0;
-
-
-    margin-top: 15svh;
-    display: flex;
-
-    filter: drop-shadow(0px 0px 8px #000000);
+.page2-main{
+   
+    padding: 1svw;
+    display: grid;
+    column-gap: 3svw;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 40svh;
+    margin-left: 3svw;
+    margin-right: 3svw;
     width: 100svw;
-    height: 70svh;
-    justify-content:center;
-    align-items: center;
-    
-
-    
-    background-color: var(--bg-color);
-
-    
-}
-
-
-.info-block{
-    margin: 50px;
-    padding: 20px;
-    width: 40svw;
     height: 50svh;
+
+
+}
+.page2-block{
+    
+    width: 100%;
+    height: 100%;
     background-color: var(--block-color);
     border-radius: 10px;
 
-    animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
-
-    animation: 0.5s appear;
-    transition: transform 0.5s;
+    padding: 1svw;
+    transition: 0.5s;
 }
 
-
-.socials {
-
-    
-    height: 100svh;
-}
 
 .hovergrow:hover{
     transform: scale(1.1);
@@ -171,8 +137,19 @@ h1{
     transform: scale(0.9);
 }
 
-h2,span{
+.page2-block > h2{
     font-family: "Open Sans", sans-serif;
+    color: white;
+    text-align: left;
+
+    font-size: 1.5em;
+    
+}
+
+
+.page2-block > span{
+    font-family: "Open Sans", sans-serif;
+    font-size: medium;
     color: white;
 }
 
@@ -187,4 +164,73 @@ h2,span{
 @keyframes fadein{
     from{opacity: 0;}
     to{opacity: 1;}
+}
+
+
+/* For Mobile */
+@media screen and (max-width: 540px) {
+   
+    .neon-button,.neon-button1{
+        width: min-content;
+        height: min-content;
+        scale: auto;
+        font-size: 100%;
+    }
+
+
+    
+    .neon-button{
+        justify-content: center;
+        align-items: center;
+        font-size: 60%;
+        height: 5svh;
+    }
+
+  
+    
+    h1{
+        font-size: xx-large;
+    }
+
+
+
+    .page2-block > h2{
+        font-family: "Open Sans", sans-serif;
+        color: white;
+        text-align: left;
+    
+        font-size: 100%;
+    }
+    
+    
+    .page2-block > span{
+        font-family: "Open Sans", sans-serif;
+        font-size: 100%;
+        color: white;
+    }
+
+    .page2-main{
+        height: 40svh;
+    }
+}
+
+
+/* For Tablets */
+@media screen and (min-width: 540px) and (max-width: 780px) {
+    .neon-button,.neon-button1{
+        width: min-content;
+        height: min-content;
+        scale: auto;
+        font-size: 200%;
+    }
+
+
+   
+
+
+
+
+    h1{
+        font-size: xx-large;
+    }
 }
