@@ -1,0 +1,266 @@
+
+@import url('https://fonts.cdnfonts.com/css/star-wars');
+@import url('https://fonts.cdnfonts.com/css/starkiller');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root{
+    --bg-color: black;
+    --block-color:#1d1e1f;
+    --card-height: 10px;
+    --card-width: 100%;
+}
+
+
+
+body {
+    background-color: var(--bg-color);
+    margin: 0;
+    display: flex;
+    width: 100svw;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+}
+
+
+
+
+
+h1{
+    position: absolute;
+   
+    font-size:3em;
+    text-align: center;
+    font-family: 'Star Wars', sans-serif;
+    color: white;
+    animation: 2s fadein;
+
+    transition: text-shadow 0.5s;
+}
+
+
+.maintitle:hover{
+    text-shadow: 0 0 0.12em hsl(0 0% 100% / 0.3), 0 0 0.3em white;
+
+    transition: 0.5s;
+}
+
+
+.neon-button1{
+
+    width: min-content;
+    height: min-content;
+    scale: auto;
+    margin-right: 50svw;
+    font-size: 2rem;
+}
+
+
+
+
+.page2-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page2-header {
+    top:2svh;
+    display:flex;
+    width: 100svw;
+    height: 20svh;
+    justify-content: center;
+    align-items: center;
+    position: absolute; /* Make .page2-header the positioned ancestor */
+    z-index: 1;
+    margin: 0;
+
+  }
+  
+  .whiteline {
+    top: 100%;
+    position: absolute;
+    justify-self: center;
+    display: flex;
+    width: 80svw;
+    height: 1svh;
+    background: white;
+
+    transition: opacity .5s;
+  }
+  
+  
+
+.video-section{
+    
+    padding: 1svw;
+    display: grid;
+    column-gap: 3svw;
+    row-gap: 5svh;
+    
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    margin-top: 40svh;
+    margin-left: 3svw;
+    margin-right: 3svw;
+    width: 100svw;
+    height: max-content;
+
+    margin-bottom: 10svh;
+}
+
+
+em{
+    color: #aaaaaa;
+}
+
+
+
+
+.video-description{
+    
+    width: 100%;
+    height: 100%;
+    background-color: var(--block-color);
+    border-radius: 10px;
+
+    padding: 1svw;
+    transition: 0.5s;
+}
+
+.video-block{
+    transition: 0.5s;
+}
+
+
+video{
+    width: 100%;
+    height: 100%;
+
+   
+}
+
+.hovergrow:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+
+
+.clock-widget-text{
+    width: 50%;
+    height: 100%;
+    font-size: small;
+    transform: scale(0.9);
+}
+
+.video-description> h2{
+    font-family: "Open Sans", sans-serif;
+    color: white;
+    text-align: left;
+
+    font-size: 1.5em;
+}
+
+.video-description > span{
+    font-family: "Open Sans", sans-serif;
+    font-size: medium;
+    color: white;
+}
+
+
+
+
+
+.page2-block{
+    
+    width: 100%;
+    height: 100%;
+    background-color: var(--block-color);
+    border-radius: 10px;
+
+    padding: 1svw;
+    transition: 0.5s;
+}
+
+
+
+
+@keyframes appear{
+    from{transform: scale(0);}
+    to{transform: scale(1);}
+}
+
+
+@keyframes fadein{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
+
+/* For Mobile */
+@media screen and (max-width: 540px) {
+   
+    .neon-button,.neon-button1{
+        width: min-content;
+        height: min-content;
+        scale: auto;
+        font-size: 100%;
+    }
+
+
+    
+    .neon-button{
+        justify-content: center;
+        align-items: center;
+        font-size: 60%;
+        height: 5svh;
+    }
+
+  
+    
+    h1{
+        font-size: xx-large;
+    }
+
+
+
+    .video-block > h2{
+        font-family: "Open Sans", sans-serif;
+        color: white;
+        text-align: left;
+    
+        font-size: 100%;
+    }
+    
+    
+    .video-block > span{
+        font-family: "Open Sans", sans-serif;
+        font-size: 100%;
+        color: white;
+    }
+
+    .page2-main{
+        height: 40svh;
+    }
+}
+
+
+/* For Tablets */
+@media screen and (min-width: 540px) and (max-width: 780px) {
+    .neon-button,.neon-button1{
+        width: min-content;
+        height: min-content;
+        scale: auto;
+        font-size: 200%;
+    }
+
+
+   
+
+
+
+
+    h1{
+        font-size: xx-large;
+    }
+}
